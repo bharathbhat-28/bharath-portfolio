@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 390" role="img"><rect width="920" height="390" fill="#e9e6dc"/><style>.t{font-family:Arial,sans-serif;fill:#161e27}.m{font-family:monospace;fill:#2b3542}.s{font-family:Arial,sans-serif;fill:#2b3542}.b{fill:#f4f2ea;stroke:#c7c0ac;stroke-width:2}</style>
+<text x="40" y="42" class="m" font-size="14" letter-spacing="2">EXPERIMENT SETUP</text>
+<rect x="40" y="72" width="230" height="105" rx="5" class="b"/><text x="60" y="105" class="m" font-size="13">TARGET COHORT</text><text x="60" y="140" class="t" font-size="27" font-weight="700">6,500–7,000</text><text x="60" y="163" class="s" font-size="14">Activated but inactive</text>
+<path d="M270 125 H320" stroke="#2c655a" stroke-width="2"/><path d="M313 118 L320 125 L313 132" fill="none" stroke="#2c655a" stroke-width="2"/>
+<rect x="320" y="72" width="230" height="105" rx="5" class="b"/><text x="340" y="105" class="m" font-size="13">RANDOM SPLIT</text><text x="340" y="140" class="t" font-size="27" font-weight="700">1,000</text><text x="340" y="163" class="s" font-size="14">selected for treatment</text>
+<rect x="605" y="55" width="275" height="120" rx="5" fill="#2c655a"/><text x="630" y="91" class="m" font-size="13" fill="#e9e6dc">TREATMENT</text><text x="630" y="125" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#f4f2ea">WABA nudge</text><text x="630" y="151" font-family="Arial,sans-serif" font-size="14" fill="#e9e6dc">message sent</text>
+<path d="M435 177 V230" stroke="#c7c0ac" stroke-width="2"/><path d="M428 223 L435 230 L442 223" fill="none" stroke="#c7c0ac" stroke-width="2"/>
+<rect x="320" y="230" width="230" height="100" rx="5" class="b"/><text x="340" y="262" class="m" font-size="13">CONTROL</text><text x="340" y="296" class="t" font-size="24" font-weight="700">Remaining users</text><text x="340" y="319" class="s" font-size="14">no nudge sent</text>
+<path d="M742 175 V230 H550" stroke="#2c655a" stroke-width="2" fill="none"/>
+<rect x="605" y="230" width="275" height="100" rx="5" class="b"/><text x="630" y="263" class="m" font-size="13">MEASURE</text><text x="630" y="296" class="t" font-size="24" font-weight="700">Reactivation</text><text x="630" y="319" class="s" font-size="14">after 3 weeks · compare groups</text>
+</svg>

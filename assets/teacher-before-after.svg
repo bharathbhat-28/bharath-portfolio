@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img"><rect width="920" height="430" fill="#e9e6dc"/>
+<style>.t{font-family:Arial,sans-serif;fill:#161e27}.m{font-family:monospace;fill:#2b3542}.s{font-family:Arial,sans-serif;fill:#2b3542}.p{fill:#f4f2ea;stroke:#c7c0ac;stroke-width:2}.r{fill:#fff;stroke:#c7c0ac;stroke-width:1}</style>
+<text x="40" y="38" class="m" font-size="14" letter-spacing="2">BEFORE → AFTER</text>
+<rect x="40" y="70" width="395" height="315" rx="5" class="p"/><text x="65" y="105" class="m" font-size="13">BEFORE · SCORE-BASED</text><text x="65" y="132" class="s" font-size="13">The band measured lesson score, not engagement.</text>
+<rect x="65" y="160" width="345" height="50" rx="3" class="r"/><circle cx="88" cy="185" r="11" fill="#dce8c0"/><text x="112" y="190" class="t" font-size="16">Student A</text><text x="370" y="190" text-anchor="end" class="m" font-size="14">82</text>
+<rect x="65" y="220" width="345" height="50" rx="3" class="r"/><circle cx="88" cy="245" r="11" fill="#f4edbd"/><text x="112" y="250" class="t" font-size="16">Student B</text><text x="370" y="250" text-anchor="end" class="m" font-size="14">54</text>
+<rect x="65" y="280" width="345" height="50" rx="3" class="r"/><circle cx="88" cy="305" r="11" fill="#e8b2ae"/><text x="112" y="310" class="t" font-size="16">Student C</text><text x="370" y="310" text-anchor="end" class="m" font-size="14">21</text>
+<text x="65" y="358" class="s" font-size="13" font-style="italic">“What does this tell me to do?”</text>
+<rect x="485" y="70" width="395" height="315" rx="5" class="p"/><text x="510" y="105" class="m" font-size="13">AFTER · ENGAGEMENT-BASED</text><text x="510" y="132" class="s" font-size="13">The band now reflects the signal teachers can act on.</text>
+<rect x="510" y="160" width="345" height="50" rx="3" class="r"/><circle cx="533" cy="185" r="11" fill="#dce8c0"/><text x="557" y="190" class="t" font-size="16">Student A</text><text x="815" y="190" text-anchor="end" class="m" font-size="14">52 min</text>
+<rect x="510" y="220" width="345" height="50" rx="3" class="r"/><circle cx="533" cy="245" r="11" fill="#f4edbd"/><text x="557" y="250" class="t" font-size="16">Student B</text><text x="815" y="250" text-anchor="end" class="m" font-size="14">18 min</text>
+<rect x="510" y="280" width="345" height="50" rx="3" class="r"/><circle cx="533" cy="305" r="11" fill="#e8b2ae"/><text x="557" y="310" class="t" font-size="16">Student C</text><text x="815" y="310" text-anchor="end" class="m" font-size="14">0 min</text>
+<text x="510" y="358" class="s" font-size="13" font-weight="700">Now tells the teacher who to nudge, and why.</text>
+</svg>
