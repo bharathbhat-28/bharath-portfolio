@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Re-Engagement Pipeline — Bharath Bhat</title>
+<meta name="description" content="Case study by Bharath Bhat on building a WhatsApp re-engagement pipeline at Chimple Learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#161e27;--ink-soft:#2b3542;--paper:#e9e6dc;--paper-hi:#f4f2ea;--line:#c7c0ac;--teal:#2c655a;--font-display:'Space Grotesk',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-body:'Source Serif 4',serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:920px;margin:0 auto;padding:0 28px}
+header{position:sticky;top:0;z-index:50;background:rgba(233,230,220,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 28px}
+.logo,.back,.eyebrow,.meta,.side-label,.caption,.next a{font-family:var(--font-mono)}
+.logo{font-weight:600;font-size:14px}
+.back{font-size:12px;text-decoration:none;color:var(--teal)}
+.back:hover{color:var(--ink)}
+.case-back{display:block;width:max-content;font-family:var(--font-mono);font-size:12px;text-decoration:none;color:var(--teal);margin-top:-4px;margin-bottom:76px}
+.case-back:hover{color:var(--ink)}
+main{padding:78px 0 100px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.eyebrow:before{content:"";width:16px;height:1px;background:var(--teal)}
+h1{font-family:var(--font-display);font-weight:600;font-size:clamp(38px,6vw,58px);line-height:1.05;letter-spacing:-.02em;max-width:760px}
+.meta{font-size:12px;color:var(--ink-soft);margin-top:14px}
+.intro{font-size:20px;max-width:68ch;color:var(--ink-soft);margin-top:26px}
+.case-grid{display:grid;grid-template-columns:150px 1fr;gap:30px;margin-top:72px}
+.side-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);padding-top:7px}
+.content h2{font-family:var(--font-display);font-size:25px;line-height:1.2;margin-bottom:16px}
+.content p{color:var(--ink-soft);margin-bottom:18px;max-width:68ch}
+.content ul{color:var(--ink-soft);padding-left:22px;margin-bottom:20px}
+.content li{margin-bottom:8px}
+.callout{background:var(--paper-hi);border:1px solid var(--line);padding:24px 26px;margin:26px 0 38px}
+.callout strong{font-family:var(--font-display);font-size:22px}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0 38px}
+.stat{background:var(--paper-hi);border:1px solid var(--line);padding:20px}
+.stat-num{font-family:var(--font-display);font-size:30px;font-weight:600}
+.stat-label{font-family:var(--font-mono);font-size:11px;color:var(--ink-soft);margin-top:4px}
+.figure{margin:34px 0 42px}
+.figure img{width:100%;height:auto;display:block;border:1px solid var(--line);background:#fff}
+.figure img.diagram{border:none;background:transparent}
+.caption{font-size:11px;color:var(--ink-soft);margin-top:9px}
+.next{margin-top:70px;padding-top:26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px}
+.next a{font-size:12px;text-decoration:none;color:var(--teal)}
+@media(max-width:760px){.case-back{margin-bottom:54px}main{padding-top:24px}.case-grid{grid-template-columns:1fr;gap:8px;margin-top:52px}.side-label{padding-top:0}.stat-grid{grid-template-columns:1fr}.intro{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="logo">BHARATH BHAT</div></div></header>
+<main><div class="wrap">
+<a class="case-back" href="index.html">← Back</a>
+<div class="eyebrow">Growth / Retention</div>
+
+<h1>WhatsApp Re-Engagement Pipeline</h1>
+<div class="meta">Chimple Learning · 2025</div>
+<p class="intro">Could a targeted WhatsApp nudge bring back students who had stopped using the app? I treated the question as an experiment rather than assuming another broadcast would solve the problem.</p>
+
+<div class="case-grid"><div class="side-label">Context</div><div class="content">
+<p>Chimple tracks students across four engagement states: Activated, Active, Inactive, and Activated but Inactive.</p>
+<p>The last group was particularly important. These were students who had played at least one lesson in the past, but had not opened the app in the last 7 days. The Teacher's App dashboard surfaced them as a red-flag group, and at any given time, there were around <strong>6,500–7,000 students</strong> in this state.</p>
+<p>We already had WhatsApp groups for communicating with parents, but coverage was inconsistent and most messages were generic. The program team also did some manual outreach, but we didn't have a clear way of knowing whether these interventions were actually bringing students back.</p>
+</div></div>
+
+<div class="figure">
+  <img class="diagram" src="assets/whatsapp-experiment-flow.svg" alt="Experiment setup showing the 6,500–7,000 inactive cohort, random selection of 1,000 treatment users, treatment and control branches, and reactivation measurement after three weeks.">
+  <div class="caption">I started with a randomized treatment/control split rather than rolling the nudge out to everyone.</div>
+</div>
+
+<div class="case-grid"><div class="side-label">The problem</div><div class="content">
+<p>The challenge wasn't that students were actively leaving the product. They were simply becoming inactive without any obvious signal.</p>
+<p>We had a large pool of students who had previously engaged with the app but had not returned for more than a week. There was no validated re-engagement mechanism in place, so we were relying on manual outreach and assumptions about what might work.</p>
+<div class="callout"><strong>Could a targeted WhatsApp nudge actually reactivate students who had stopped using the app?</strong></div>
+</div></div>
+
+<div class="case-grid"><div class="side-label">Approach</div><div class="content">
+<p>I treated the first rollout as a controlled experiment.</p>
+<p>From the pool of approximately <strong>6,500–7,000 Activated-but-Inactive students</strong>, I used our Looker dashboard to pull and segment the cohort. I randomly selected <strong>1,000 students as the treatment group</strong>, while the remaining students became the control group and received no nudge.</p>
+<p>The message was intentionally simple. It was a parent-facing WhatsApp message explaining that their child had not completed homework recently and reinforcing the importance of regular practice.</p>
+<p>I deliberately didn't start with personalization or complex messaging logic. The first question was more fundamental: does reaching the right users at the right time make a measurable difference?</p>
+</div></div>
+
+<div class="case-grid"><div class="side-label">What I shipped</div><div class="content">
+<p>I put together an automated <strong>WhatsApp Business API (WABA) re-engagement pipeline</strong> that connected:</p>
+<div class="callout"><strong>Looker cohort → targeted WhatsApp message → reactivation tracking</strong></div>
+<p>The treatment group received the nudge, while the control group received nothing. We then tracked reactivation over a <strong>3-week period</strong> and compared the two groups.</p>
+</div></div>
+
+<div class="figure">
+  <img class="diagram" src="assets/whatsapp-pipeline.svg" alt="Looker cohort segmentation feeding a targeted WhatsApp nudge and reactivation tracking.">
+  <div class="caption">The shipped loop connected cohort identification, targeted messaging, and measurement.</div>
+</div>
+
+<div class="case-grid"><div class="side-label">Results</div><div class="content">
+<div class="stat-grid"><div class="stat"><div class="stat-num">7.36% → 17.66%</div><div class="stat-label">Reactivation rate: control → treatment</div></div><div class="stat"><div class="stat-num">2.4×</div><div class="stat-label">Increase in reactivation rate</div></div></div>
+<p>The number of reactivated students also increased during the experiment, from <strong>25 students in week 1 to 269 by week 3</strong>.</p>
+<p>This gave us evidence that targeted WhatsApp outreach could be an effective re-engagement mechanism rather than simply another communication channel.</p>
+</div></div>
+
+<div class="figure">
+  <img class="diagram" src="assets/whatsapp-results.svg" alt="Results showing 7.36 percent control reactivation, 17.66 percent treatment reactivation, a 2.4 times lift, and reactivation volume rising from 25 in week one to 269 in week three.">
+  <div class="caption">The experiment produced a 2.4× reactivation lift, with weekly reactivation volume rising from 25 to 269.</div>
+</div>
+
+<div class="case-grid"><div class="side-label">What I learned</div><div class="content">
+<p>The most interesting part of the experiment wasn't the message itself.</p>
+<p>The message was relatively simple and wasn't personalized by student name or lesson history. What mattered first was identifying <strong>which students had become inactive and reaching them at the right point in their engagement journey</strong>.</p>
+<p>That changed how I looked at the problem. Instead of starting with, “How can we make the message smarter?”, the more important question became, “Are we reaching the right user at the right time?”</p>
+<p>If I were taking the experiment further, I'd test whether lightweight personalization — such as referencing the student's name or the lesson they had previously started — could improve the result further.</p>
+</div></div>
+
+<div class="next"><a href="index.html">← Back to selected work</a><a href="case-study-teachers-app.html">Next case study →</a></div>
+
+</div></main>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engagement-First Dashboard Redesign — Bharath Bhat</title>
+<meta name="description" content="Case study by Bharath Bhat on redesigning the Chimple Learning Teacher's App dashboard around engagement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#161e27;--ink-soft:#2b3542;--paper:#e9e6dc;--paper-hi:#f4f2ea;--line:#c7c0ac;--teal:#2c655a;--font-display:'Space Grotesk',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-body:'Source Serif 4',serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:920px;margin:0 auto;padding:0 28px}
+header{position:sticky;top:0;z-index:50;background:rgba(233,230,220,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 28px}
+.logo,.back,.eyebrow,.meta,.side-label,.caption,.next a{font-family:var(--font-mono)}
+.logo{font-weight:600;font-size:14px}
+.back{font-size:12px;text-decoration:none;color:var(--teal)}
+.back:hover{color:var(--ink)}
+.case-back{display:block;width:max-content;font-family:var(--font-mono);font-size:12px;text-decoration:none;color:var(--teal);margin-top:-4px;margin-bottom:76px}
+.case-back:hover{color:var(--ink)}
+main{padding:78px 0 100px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.eyebrow:before{content:"";width:16px;height:1px;background:var(--teal)}
+h1{font-family:var(--font-display);font-weight:600;font-size:clamp(38px,6vw,58px);line-height:1.05;letter-spacing:-.02em;max-width:760px}
+.meta{font-size:12px;color:var(--ink-soft);margin-top:14px}
+.intro{font-size:20px;max-width:68ch;color:var(--ink-soft);margin-top:26px}
+.case-grid{display:grid;grid-template-columns:150px 1fr;gap:30px;margin-top:72px}
+.side-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);padding-top:7px}
+.content h2{font-family:var(--font-display);font-size:25px;line-height:1.2;margin-bottom:16px}
+.content p{color:var(--ink-soft);margin-bottom:18px;max-width:68ch}
+.content ul{color:var(--ink-soft);padding-left:22px;margin-bottom:20px}
+.content li{margin-bottom:8px}
+.callout{background:var(--paper-hi);border:1px solid var(--line);padding:24px 26px;margin:26px 0 38px}
+.callout strong{font-family:var(--font-display);font-size:22px}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0 38px}
+.stat{background:var(--paper-hi);border:1px solid var(--line);padding:20px}
+.stat-num{font-family:var(--font-display);font-size:30px;font-weight:600}
+.stat-label{font-family:var(--font-mono);font-size:11px;color:var(--ink-soft);margin-top:4px}
+.figure{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.figure img{
+  width:82%;
+  max-width:720px;
+  height:auto;
+  display:block;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.figure img.teacher-dashboard{
+  width:58%;
+  max-width:420px;
+}
+
+@media(max-width:760px){
+  .figure img{width:100%;max-width:none;}
+}
+.caption{font-size:11px;color:var(--ink-soft);margin-top:9px}
+.next{margin-top:70px;padding-top:26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px}
+.next a{font-size:12px;text-decoration:none;color:var(--teal)}
+@media(max-width:760px){.case-back{margin-bottom:54px}main{padding-top:24px}.case-grid{grid-template-columns:1fr;gap:8px;margin-top:52px}.side-label{padding-top:0}.stat-grid{grid-template-columns:1fr}.intro{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="logo">BHARATH BHAT</div></div></header>
+<main><div class="wrap">
+<a class="case-back" href="index.html">← Back</a>
+<div class="eyebrow">Product Strategy / UX</div>
+
+<h1>Engagement-First Dashboard Redesign</h1>
+<div class="meta">Chimple Learning · 2025</div>
+<p class="intro">The organization had already validated its North Star Metric. The Teacher's App dashboard was still helping teachers make decisions using a different signal.</p>
+
+<div class="case-grid"><div class="side-label">Context</div><div class="content">
+<p>Chimple's North Star Metric is <strong>60 minutes of student engagement per week</strong>. This metric had already been validated through a randomized controlled trial of the app before I joined the organization, so it was the metric the product was expected to optimize toward.</p>
+<p>The problem was that the Teacher's App dashboard wasn't aligned with it.</p>
+<p>Teachers were shown red, yellow, and green bands for each student based on <strong>lesson scores out of 100</strong>. The weekly summary beside it had the same problem — it surfaced information, but it wasn't connected to the engagement metric the organization had already established as important.</p>
+<p>More importantly, teachers told me they didn't understand what the bands meant or what they were supposed to do with them.</p>
+</div></div>
+
+<div class="case-grid"><div class="side-label">The problem</div><div class="content">
+<p>The dashboard was supposed to help teachers identify students who needed attention.</p>
+<p>But a lesson score doesn't tell a teacher whether a student is building a regular learning habit. A student could score well on a lesson but still spend very little time learning each week.</p>
+<p>We had already validated that <strong>60 minutes of weekly engagement</strong> was the metric that mattered. Yet the dashboard was asking teachers to make decisions using a completely different signal.</p>
+</div></div>
+
+<div class="figure">
+  <img class="diagram" src="assets/teacher-nsm.svg" alt="Teacher's App North Star visual showing 60 minutes per week and engagement bands around that target.">
+  <div class="caption">The redesign started by translating the validated 60-minute weekly North Star into a signal teachers could act on.</div>
+</div>
+
+<div class="case-grid"><div class="side-label">Getting alignment</div><div class="content">
+<p>I raised this with my CEO and manager and made the case that the dashboard needed to be rebuilt around the North Star Metric rather than lesson scores.</p>
+<div class="callout"><strong>If 60 minutes of weekly engagement is the metric we're trying to improve, teachers should be able to see and act on that metric directly.</strong></div>
+<p>Once we had alignment, I worked through what that should look like in practice. I didn't want to replace the existing bands with a simple active/inactive status. Teachers needed enough detail to distinguish between students who had no engagement at all and students who were engaging but were still below the weekly target.</p>
+</div></div>
+
+<div class="figure">
+  <img class="diagram" src="assets/teacher-before-after.svg" alt="Before and after comparison showing a score-based dashboard changing to engagement-based bands.">
+  <div class="caption">The key product decision: replace an ambiguous score signal with an engagement signal tied to the North Star.</div>
+</div>
+
+<div class="case-grid"><div class="side-label">What I shipped</div><div class="content">
+<p>I redesigned and shipped the <strong>weekly class summary</strong> around rolling 7-day engagement data.</p>
+<ul><li><strong>Active students</strong></li><li><strong>Average time spent</strong></li><li><strong>Average score</strong></li></ul>
+<p>The student-level view moved from score-based bands to four engagement bands:</p>
+<ul>
+<li><strong>Green — 45+ minutes:</strong> students on pace toward the 60-minute weekly North Star.</li>
+<li><strong>Yellow — some engagement, but below 45 minutes:</strong> students who are active but may need additional encouragement.</li>
+<li><strong>Red — 0 minutes this week:</strong> students who had previously been activated but had no engagement during the current week.</li>
+<li><strong>Grey — no activity ever:</strong> students who had never played a lesson.</li>
+</ul>
+<p>The same engagement data also fed into the <strong>leaderboard</strong>, creating consistency between the dashboard's diagnostic view and its motivational layer.</p>
+</div></div>
+
+<div class="figure"><img class="teacher-dashboard" src="assets/teacher-dashboard.jpg" alt="Teacher's App weekly class summary showing active students, average time spent, average score, and four student engagement bands."><div class="caption">The redesigned weekly class summary, with engagement replacing lesson score as the primary signal.</div></div>
+
+<div class="case-grid"><div class="side-label">Result</div><div class="content">
+<p>The redesigned dashboard was <strong>fully shipped and is live</strong>.</p>
+<p>I don't have a quantified adoption or behavior-change metric yet, so I wouldn't claim one here. The immediate outcome was that we removed a specific source of confusion for teachers and aligned the dashboard with the engagement metric the organization had already validated.</p>
+<p>More importantly, the same engagement framework now powers both the teacher's diagnostic view and the leaderboard.</p>
+</div></div>
+
+<div class="case-grid"><div class="side-label">What I learned</div><div class="content">
+<p>This project reinforced something I now pay close attention to:</p>
+<div class="callout"><strong>A North Star Metric only matters if the product surfaces around it help people act on it.</strong></div>
+<p>We had already done the difficult part — validating the 60-minute engagement metric through an RCT. But that learning wasn't reaching teachers through the product.</p>
+<p>The solution wasn't another feature. It was making sure the people closest to the students were looking at the same signal the organization had decided mattered.</p>
+<p>It also changed how I approach product disagreements. Instead of arguing that a dashboard should be redesigned because it “felt wrong,” I could connect the change directly to existing evidence: <strong>we know what metric matters, and our product isn't showing it.</strong></p>
+</div></div>
+
+<div class="next"><a href="index.html">← Back to selected work</a><a href="case-study-whatsapp.html">← Previous case study</a></div>
+
+</div></main>
+</body>
+</html>
